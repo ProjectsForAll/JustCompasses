@@ -1,28 +1,25 @@
-package host.plas.exampleproject;
+package host.plas.justcompasses;
 
 import host.plas.bou.BetterPlugin;
-import host.plas.exampleproject.config.DatabaseConfig;
-import host.plas.exampleproject.config.MainConfig;
-import host.plas.exampleproject.events.BouListener;
-import host.plas.exampleproject.events.BukkitListener;
+import host.plas.justcompasses.config.MainConfig;
+import host.plas.justcompasses.events.BouListener;
+import host.plas.justcompasses.events.BukkitListener;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public final class ExampleProject extends BetterPlugin {
+public final class JustCompasses extends BetterPlugin {
     @Getter @Setter
-    private static ExampleProject instance;
+    private static JustCompasses instance;
     @Getter @Setter
     private static MainConfig mainConfig;
-    @Getter @Setter
-    private static DatabaseConfig databaseConfig;
 
     @Getter @Setter
     private static BukkitListener bukkitListener;
     @Getter @Setter
     private static BouListener bouListener;
 
-    public ExampleProject() {
+    public JustCompasses() {
         super();
     }
 
@@ -32,7 +29,6 @@ public final class ExampleProject extends BetterPlugin {
         setInstance(this);
 
         setMainConfig(new MainConfig());
-        setDatabaseConfig(new DatabaseConfig());
 
         setBukkitListener(new BukkitListener());
         setBouListener(new BouListener());
